@@ -1,0 +1,2835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SlowControlInterface</class>
+ <widget class="QMainWindow" name="SlowControlInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1295</width>
+    <height>852</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LUNA DAQ</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="Acquisition">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <attribute name="title">
+        <string>Acquisition</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="0,3,2,1,1,1">
+        <item>
+         <widget class="QComboBox" name="boardSelection">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentText">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="boardInfo">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>General Board Informations:</string>
+          </property>
+          <widget class="QWidget" name="gridLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>30</y>
+             <width>1041</width>
+             <height>171</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="5">
+             <widget class="QLabel" name="lab_Model">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="lab_nbChannels">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="nbChannels">
+              <property name="text">
+               <string>Number of channels:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="lab_fwName">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLabel" name="lab_AMC">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLabel" name="lab_ROC">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="dgtzName">
+              <property name="text">
+               <string>Board Model:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="6">
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="lab_dgtzName">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="fwName">
+              <property name="text">
+               <string>Firmware version:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLabel" name="amcFwRel">
+              <property name="text">
+               <string>AMC FW rel:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLabel" name="rocFwRel">
+              <property name="text">
+               <string>ROC FW rel:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLabel" name="modelNb">
+              <property name="text">
+               <string>Model:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QLabel" name="formFactor">
+              <property name="text">
+               <string>Form factor:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="5">
+             <widget class="QLabel" name="lab_Form">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="4">
+             <widget class="QLabel" name="famCode">
+              <property name="text">
+               <string>Family code:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="5">
+             <widget class="QLabel" name="lab_famCode">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="4">
+             <widget class="QLabel" name="serialNb">
+              <property name="text">
+               <string>Serial no.:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="5">
+             <widget class="QLabel" name="lab_serialNb">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="4">
+             <widget class="QLabel" name="adcBits">
+              <property name="text">
+               <string>ADC bits:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="5">
+             <widget class="QLabel" name="lab_adcBits">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="channelsInfo">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="title">
+           <string>Enabled channels</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <widget class="QWidget" name="gridLayoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>30</y>
+             <width>1041</width>
+             <height>124</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="channelsLayout"/>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="xdaqButtons">
+          <property name="spacing">
+           <number>100</number>
+          </property>
+          <property name="leftMargin">
+           <number>50</number>
+          </property>
+          <property name="rightMargin">
+           <number>50</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="startXdaqButton">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the XDAQ instances.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Note: the instances are run inside tmux; run &amp;quot;tmux ls&amp;quot; in terminal to list them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Start XDAQ</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="stopXdaqButton">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop the XDAQ instances.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Stop XDAQ</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="configureXdaqButton">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure the XDAQ instances connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Configure XDAQ</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="acqInfoLayout" stretch="1,1,1,7,1,1,1,14">
+          <property name="spacing">
+           <number>12</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="runNumberLabel">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Run Number.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Run Number:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="val_runNumber">
+            <property name="maximum">
+             <number>65535</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="dataPathLabel">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output File Path.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Output File Path:</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QLineEdit" name="val_dataPath">
+            <property name="text">
+             <string>~/data/</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables the data saving for the different units.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Note: the Readout Unit (RU) saves the raw buffer from the CAEN boards thus the output file can get easily heavy. The Local Filter saves only the important information, but eliminates the waveforms.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Save Data:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="saveRU">
+            <property name="text">
+             <string>RU</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="saveLF">
+            <property name="text">
+             <string>LF</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="daqInfo" columnstretch="2,3,2,3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="ru">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Readout Unit status.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>RU Status:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="lfStatus">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="lf">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local Filter status.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>LF Status:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="ruRate">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Readout Unit buffer rate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>RU Rate:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="lfRate">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local Filter buffer rate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>LF Rate:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="ruStatus">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QLabel" name="ruDataRate">
+              <property name="text">
+               <string>0 Hz</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLabel" name="lfDataRate">
+              <property name="text">
+               <string>0 Hz</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="acqButtonsLayout">
+          <property name="spacing">
+           <number>100</number>
+          </property>
+          <property name="leftMargin">
+           <number>50</number>
+          </property>
+          <property name="rightMargin">
+           <number>50</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="startAcqButton">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the data acquisition.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Start Acquisition</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="stopAcqButton">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop the data acquisition.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Stop Acquisition</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="indChannels">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QComboBox" name="channelSelection">
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Channel Selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentText">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="chanParams" rowstretch="0,0,0,0" columnstretch="1,2,1,2">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <property name="spacing">
+           <number>7</number>
+          </property>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="val_trace">
+            <item>
+             <property name="text">
+              <string>Disabled</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Enabled</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QLCDNumber" name="val_adcTemp"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="selfTrg">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When disabled, the self-trigger (fast discriminator output) is still propagated to the mother board for coincidence logic and TRG-OUT front panel connector, though it is not used by the channel to acquire the event.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Self Trigger:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLabel" name="tgrThr">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Threshold of the Trigger.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Trigger Threshold</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QSpinBox" name="val_adcOffset">
+            <property name="maximum">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="val_selfTrg">
+            <item>
+             <property name="text">
+              <string>Enabled</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Disabled</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="adcOffset">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This register allows to adjust the baseline position (i.e. the 0 Volt) of the input signal on the ADC scale. Increasing values of DC Oﬀset make the baseline decrease. The range of the DAC is about 5% (typ.) larger than the ADC range, hence DAC settings close to 0 and 64K correspond to ADC respectively over and under range.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>ADC Offset (%):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QSpinBox" name="val_stcLen">
+            <property name="maximum">
+             <number>8192</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLabel" name="adcTemp">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This register monitors the temperature of the ADC chips.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>ADC Temperature (°C):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="stcLen">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Each couple of channels has a ﬁxed amount of RAM memory to save the events. The memory is divided into a programmable number of buﬀers, called ”aggregates”, whose number of events can be programmed by this register. The maximum number of events per aggregate depends on the aggregate size and the event size. &lt;/p&gt;&lt;p&gt;Note: it is usually recommended to keep this value high to op mize the readout, except in case of small input rate, where it is recommended to use a smaller value. Since the memory cannot be read until the aggregate is full, settings a small number of events per aggregate makes the events ready to be read in a shorter me scale.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Trace Length:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="trace">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables the data recording of the waveform.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Trace:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QSpinBox" name="val_trgThr">
+            <property name="maximum">
+             <number>65535</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="inputRange">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This register sets the input dynamic range of each channel individually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Input Range:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="val_inputRange">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>2 Vpp</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>0.5 Vpp</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="val_sigPol">
+            <item>
+             <property name="text">
+              <string>Positive</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Negative</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="sigPol">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Polarity of the input pulse.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Pulse Polarity: </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="fwSpecific">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tabFwWF">
+           <attribute name="title">
+            <string>General</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <layout class="QGridLayout" name="flags">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="0" column="0">
+               <layout class="QGridLayout" name="common" columnstretch="1,3,1,3,1,3">
+                <item row="1" column="0">
+                 <widget class="QLabel" name="trgPropagation">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables the propagation of the individual trigger from mother board individual trigger logic to the mezzanine. This is required in case of coincidence trigger mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Trigger Propagation:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="4">
+                 <widget class="QLabel" name="timeStamp">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables Time Stamp recording.&lt;/p&gt;&lt;p&gt;Note: in most of the boards it is always activated.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Time Stamp:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QComboBox" name="val_energy">
+                  <item>
+                   <property name="text">
+                    <string>Disabled</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Enabled</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="1" column="5">
+                 <widget class="QComboBox" name="val_charge">
+                  <item>
+                   <property name="text">
+                    <string>Disabled</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Enabled</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="dualTrace">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;In oscilloscope or mixed mode, it is possible to plot two diﬀerent waveforms.When the dual trace is enabled, the samples of the two signals are interleaved, thus each waveform is recorded at half of the ADC frequency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Dual Trace:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QComboBox" name="val_trgPropagation">
+                  <item>
+                   <property name="text">
+                    <string>Disabled</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Enabled</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="0" column="5">
+                 <widget class="QComboBox" name="val_timeStamp">
+                  <item>
+                   <property name="text">
+                    <string>Disabled</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Enabled</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="1" column="4">
+                 <widget class="QLabel" name="charge">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables Charge recording.&lt;/p&gt;&lt;p&gt;Note: in most of the boards it is always activated.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Charge:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="val_dualTrace">
+                  <item>
+                   <property name="text">
+                    <string>Disabled</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Enabled</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QLabel" name="extrasFlag">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables EXTRAS / EXTRAS 2 word.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Extras:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QComboBox" name="val_extrasFlag">
+                  <item>
+                   <property name="text">
+                    <string>Disabled</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Enabled</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QLabel" name="energy">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables Energy recording.&lt;/p&gt;&lt;p&gt;Note: in most of the boards it is always activated.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Energy:</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="veto" columnstretch="1,3,1,3,1,3">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="0" column="4">
+               <widget class="QLabel" name="aggPerBuff">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This register sets the maximum number of complete aggregates which has to be transferred for each block transfer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Aggregates per Buffer:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="autoDataFlush">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;In case of very slow rate, this command forces the automatic data readout in a me window of 16-32 ms, even if the buﬀer is not completed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Auto Data Flush:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="val_autoDataFlush">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="evtsPerAgg">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Each couple of channels has a ﬁxed amount of RAM memory to save the events. The memory is divided into a programmable number of buﬀers, called ”aggregates”, whose number of events can be programmed by this register. The maximum number of events per aggregate depends on the aggregate size and the event size.&lt;/p&gt;&lt;p&gt;Note: it is usually recommended to keep this value high to optimize the readout, except in case of small input rate, where it is recommended to use a smaller value. Since the memory cannot be read until the aggregate is full, settings a small number of events per aggregate makes the events ready to be read in a shorter me scale.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Events per Aggregate:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QSpinBox" name="val_aggPerBuff">
+                <property name="maximum">
+                 <number>1023</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QSpinBox" name="val_evtsPerAgg">
+                <property name="maximum">
+                 <number>1023</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="data" columnstretch="1,3,1,3,1,3">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="0" column="3">
+               <widget class="QComboBox" name="val_vetoSteps">
+                <item>
+                 <property name="text">
+                  <string>16 ns</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>4 us</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1048 us</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>264 ms</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="val_vetoWidth">
+                <property name="maximum">
+                 <number>65535</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="vetoWidth">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This register sets the veto duration.&lt;/p&gt;&lt;p&gt;Note: A Veto Width equal to 0 means that the veto lasts for the duration of the signal that generated it. A Veto Width diﬀerent from 0 sets the veto duration by the amount of me written in the register.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Veto Width:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="extVetoDelay">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This register is valid for VME boards only and set the duration of the Extended VetoIn signal for trigger inhibit on TRG-OUT when bit[12]=1 of 0x8100 register. Such function is useful in particular cases of synchroniza on of a multi-board system.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Extended Veto Delay (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="vetoSteps">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Veto Step Width.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Veto Steps:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QSpinBox" name="val_extVetoDelay">
+                <property name="maximum">
+                 <number>65535</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tabFwPSD">
+           <attribute name="title">
+            <string>DPP-PSD</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <layout class="QGridLayout" name="mainPSD" columnstretch="1,2,1,2,1,2">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="1" column="4">
+               <widget class="QLabel" name="gateOffset">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To correctly integrate the input pulse, the integration Gate starts before the trigger position. The Gate Oﬀset deﬁnes how many samples the Gate starts before the trigger.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Gate Offset (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="chargeSensitivity">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deﬁnes how many fC of charge correspond to one channel of the energy spectrum.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Charge Sensitivity:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="cfdFraction">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the CFD fraction.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>CFD Fraction:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="cfdPoints">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the Interpolation Points, corresponding to the n-th sample before and after the zero crossing that are used for the linear interpolation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>CFD Interpolation:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="val_cfdDelay">
+                <property name="maximum">
+                 <number>510</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QComboBox" name="val_cfdFraction">
+                <item>
+                 <property name="text">
+                  <string>25 %</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>50 %</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>75 %</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>100 %</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="cfdDelay">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the CFD delay.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>CFD Delay (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QComboBox" name="val_cfdPoints">
+                <item>
+                 <property name="text">
+                  <string>Frist Sample</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Second Sample</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Third Sample</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Fourth Sample</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="shortGate">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the Short Gate width for the charge integration of the fast component in the Pulse Shape Discrimination.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Short Gate (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="val_shortGate">
+                <property name="maximum">
+                 <number>8190</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLabel" name="longGate">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the Long Gate width for the charge integration of the entire component in the Pulse Shape Discrimination.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Long Gate (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QSpinBox" name="val_longGate">
+                <property name="maximum">
+                 <number>131070</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="5">
+               <widget class="QSpinBox" name="val_gateOffset">
+                <property name="maximum">
+                 <number>510</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLabel" name="chargeThreshold">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Input signals of small amplitude can be selected by setting a small threshold level. Unfortunately, this might result in an increase of the noise level. The noise can be distinguished by real signals in the energy spectrum, since it usually appears as a peak close to the 0 energy. This register allows the user to set a threshold in the spectrum (Qthr) to cut events with charge Qlong &amp;lt; Qthr.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Charge Long Threshold:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QSpinBox" name="val_chargeThreshold">
+                <property name="maximum">
+                 <number>65535</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="5">
+               <widget class="QComboBox" name="val_chargeCut">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="2" column="4">
+               <widget class="QLabel" name="chargeCut">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable Charge Threshold cut.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Charge Threshold Flag:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QComboBox" name="val_chargeSensitivity">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Left values for the 2 Vpp, right values for the 0.5 Vpp. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>5 fC / 1.25 fC</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>20 fC / 5 fC</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>80 fC / 20 fC</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>320 fC / 80 fC</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1.28 pC / 320 fC</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>5.12 pC / 1.28 pC</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="advancedPSD" rowstretch="10,0" columnstretch="1,2,1,2,1,2">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="1" column="0">
+               <widget class="QLabel" name="extras">
+                <property name="text">
+                 <string>Extras:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="val_extras">
+                <item>
+                 <property name="text">
+                  <string>TS / Base</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TS / Flags</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TS / Flags / Fine TS</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reserved</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Lost TRG / Total TRG</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Pos Zero Cross / Neg Zero Cross</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reserved</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Fixed Value</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="baselineMean">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the number of samples for the baseline mean calculation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Baseline Mean:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="val_baselineMean">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fixed: the baseline value is ﬁxed to the value set in register 0x1n64.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Fixed</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>16</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>64</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>256</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1024</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QComboBox" name="val_psdCut">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Below</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Above</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="psdCut">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Discard events above or below the PSD cut.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>PSD Cut:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="discrMode">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Discrimination mode for the event selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Discrimination Mode:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QComboBox" name="val_discrMode">
+                <item>
+                 <property name="text">
+                  <string>LED</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>CFD</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLabel" name="purThreshold">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A pile-up event is detected when there is a situation of ”peak-valley-peak” inside the same gate. The gap between the valley and the peak can be programmed through this register.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>PUR-GAP Threshold:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QSpinBox" name="val_purThreshold">
+                <property name="maximum">
+                 <number>4095</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="5">
+               <widget class="QSpinBox" name="val_psdCutThreshold">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The desired value has to be multiplied by 1024. For example for a PSD threshold of 0.12, write 122 (= 0.12 * 1024).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="4">
+               <widget class="QLabel" name="psdCutThreshold">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the PSD threshold to online select events according to their PSD value. PSD ranges from 0 to 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>PSD Cut Threshlod:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="flagsPSD" columnstretch="1,2,1,2,1,2,1,2">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="val_chargePedestal">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <widget class="QLabel" name="trgHysteresis">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The trigger can be inhibited during the trailing edge of a pulse, to avoid re-triggering on the pulse itself.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Trigger Hysteresis:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="pur">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pile-Up Rejection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>PUR:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QComboBox" name="val_overRangeReject">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QComboBox" name="val_pur">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="overRangeReject">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reject the event when the ADC sample value is over/under the dynamic range during the long gate integration.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Over Range Rejection:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="chargePedestal">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled a ﬁxed value of 1024 is added to the charge. This feature is useful in case of energies close to zero.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Charge Pedestal:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="7">
+               <widget class="QComboBox" name="val_trgHysteresis">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="wavePSD" rowstretch="0" columnstretch="1,2,1,2,1,2,1,2">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="0" column="5">
+               <widget class="QComboBox" name="val_digitalProbe2PSD">
+                <item>
+                 <property name="text">
+                  <string>Short Gate</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Over Threshold</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TRG Validation</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TRG Hold-Off</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Pile Up TRG</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>PSD Cut High</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Baseline Freeze</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Trigger</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QComboBox" name="val_digitalProbe1PSD">
+                <item>
+                 <property name="text">
+                  <string>Long Gate</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Over Threshold</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Shaped TRG</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TRG Val Acceptance Win</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Pile Up</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Coincidence</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reserved</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Trigger</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="analogProbePSD">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Analog Probe selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Analog Probe:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <widget class="QLabel" name="enableDigitalProbePSD">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable Digital Probes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Enable Digital Probe:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="digitalProbe2PSD">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Digital Probe 2 selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Digital Probe 2:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="digitalProbe1PSD">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Digital Probe 1 selection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Digital Probe 1:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="7">
+               <widget class="QComboBox" name="val_enableDigitalProbePSD">
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="val_analogProbePSD"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tabFwPHA">
+           <attribute name="title">
+            <string>DPP-PHA</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <layout class="QGridLayout" name="mainPHA" rowstretch="10,0" columnstretch="0,0,0,0,0,0,0,0">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="flat_top">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the Trapezoid Flat Top width.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Flat Top (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="7">
+               <widget class="QSpinBox" name="val_inputRise">
+                <property name="maximum">
+                 <number>2040</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="peakTime">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Position in the ﬂat top region where the samples are used for the calculation of the peak height. The peaking me is referred to the trigger position or to the trigger validation signal according to the trigger mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Peaking Time (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="decayTime">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This register corresponds to the trapezoid pole-zero cancellation. The user must set this register equal to the decay time of the pre-ampliﬁer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Decay Time (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QSpinBox" name="val_peakHoldOff">
+                <property name="maximum">
+                 <number>4092</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="val_flatTop">
+                <property name="maximum">
+                 <number>32760</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="riseTime">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the Trapezoid Rise Time, i.e. the Shaping Time of the energy ﬁlter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Rise Time (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QSpinBox" name="val_riseTime">
+                <property name="maximum">
+                 <number>32760</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <widget class="QLabel" name="inputRise">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This register deﬁnes the me constant of the derivative component of the PHA fast discriminator ﬁlter.&lt;/p&gt;&lt;p&gt;In case of RC-CR2 this value must be equal (or 50% more) to the input rising edge, in such a way the RC-CR2 peak value corresponds to the height of the input signal.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Input Time (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="val_peakTime">
+                <property name="maximum">
+                 <number>32760</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QSpinBox" name="val_decayTime">
+                <property name="maximum">
+                 <number>524280</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLabel" name="peakHoldOff">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Peak Hold-oﬀ starts at the end of the trapezoid ﬂat top and deﬁnes how close must be two trapezoids to be considered piled-up. Zero is the case where the ﬂat top of one trapezoid starts exactly at the end of the ﬂat top of the previous one.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Peak Hold-Off (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="4">
+               <widget class="QLabel" name="riseTimeValWindow">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Rise Time Valida on Window is used by the rise me discriminator (RTD) to reject pulses that overlap in the rise time. Such events are identiﬁed by a longer RC-CR2 signal (the RC-CR2 gets longer to reach the zero crossing and therefore to trigger) than the RC-CR2 of a single pulse. The rise time validation window starts in correspondence with the RC-CR2 threshold crossing and lasts for the duration written in this register. If no trigger occurs within this acceptance window, the algorithm consider the event as a pile-up and reject it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Rise Time Validation Window (ns):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="5">
+               <widget class="QSpinBox" name="val_riseTimeValWindow">
+                <property name="maximum">
+                 <number>4092</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="advancedPHA" rowstretch="10,0" columnstretch="1,2,1,2,1,2">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="0" column="2">
+               <widget class="QLabel" name="baselineAverage">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of samples for the baseline average calculation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Baseline Average:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="peakAverage">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Corresponds to the number of samples for the averaging window of the trapezoid height calculation.&lt;/p&gt;&lt;p&gt;Note: for a correct energy calculation the Peak Mean should be contained in the ﬂat region of the Trapezoid Flat Top.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Peak Average:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="4">
+               <widget class="QLabel" name="puFlag">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Usually the algorithm saves a pile-up event setting its energy = 0. When this bit is enabled, the algorithm returns the read energy value, though this value does not correspond to the real energy of the pulse. PU ﬂag is set to 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>PU Flag:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="5">
+               <widget class="QComboBox" name="val_puFlag">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="extras2">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The channel aggregate data format has a 32 bit word, called EXTRAS 2 word which can be conﬁgured to have the following information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Extras2:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="val_extras2">
+                <item>
+                 <property name="text">
+                  <string>TS / Base</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reserved</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TS / Fine TS</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reserved</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Lost TRG / Total TRG</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Evt Before / Evt After</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reserved</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLabel" name="roFlag">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When enabled, the algorithm creates a fake event with Time Stamp = 0, Energy = 0, PU = 1, bit[3] and bit[1] of EXTRAS = 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Roll-Over Flag:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QComboBox" name="val_roFlag">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="rccr2">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deﬁnes the number of samples of a moving average ﬁlter used for the RC-CR2 signal formation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>RC-CR2 Average:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QComboBox" name="val_rccr2">
+                <item>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>16</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>32</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>64</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>128</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="val_peakAverage">
+                <item>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>16</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>64</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QComboBox" name="val_baselineAverage">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Not evaluated: the energy values are not subtracted by the baseline.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Not Evaluated</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>16</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>64</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>256</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1024</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>4096</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>16384</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="gainPHA" columnstretch="1,2,1,2,1,2,1,2">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="0" column="5">
+               <widget class="QComboBox" name="val_decimation">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>2 Samples</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>4 Samples</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>8 Samples</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <widget class="QLabel" name="decimationGain">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This gain can be used in conjunction with the decimation to multiply the input samples by the same factor of the decimation and avoid losses in the resolution.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Decimation Gain:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="fineGain">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The trapezoidal ﬁlter mathematically produces a signal whose amplitude is proportional to the input signal, with mulplicative factors depending on k (Trap. Rise Time) and M (Decay Time). In the DPP-PHA algorithm, the user must set two parameters: the Trapezoid Rescaling (SHF) and the Fine Gain (f). Given a desired Fine Gain (fg), the user must write in the register: f = 64K*fg*2&lt;span style=&quot; vertical-align:super;&quot;&gt;SHF&lt;/span&gt; /(k*M), where SHF is the closest power of 2 to k*M and 64K is the normalization over 16 bits.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Fine Gain:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="trpzRescaling">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The trapezoid generated by the energy ﬁlter in the FPGA is k*M times higher than the input pulse, where k is the trapezoid rise time and M is the input signal decay time. This value is internally represented over 48 bits and must be rescaled to 15 bit (i.e. 32K channels) before it is used to calculate the energy value. The trapezoid rescaling SHF deﬁnes how many bits are right shited before applying the mask with 0x3FFF and extract the 15 bit value of the pulse height.&lt;/p&gt;&lt;p&gt;Note: use a value for SHF such that 2&lt;span style=&quot; vertical-align:super;&quot;&gt;SHF&lt;/span&gt; &amp;lt;= M*k &amp;lt; 2&lt;span style=&quot; vertical-align:super;&quot;&gt;(SHF+1) &lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>TRPZ Rescaling:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QSpinBox" name="val_fineGain">
+                <property name="maximum">
+                 <number>65535</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="val_trpzRescaling">
+                <property name="maximum">
+                 <number>63</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="decimation">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The input signal samples can be averaged within the number of samples deﬁned by the decimation. This has the analogous eﬀect as reducing the sampling frequency of the board.&lt;/p&gt;&lt;p&gt;Note: the decimation applies to the energy ﬁlter only (i.e. to Decay Time, Trap. Rise Time, and Trap. Flat Top). Timing ﬁlter (RC-CR2), Baseline, Trigger Hold-Oﬀ, and Record Length are not aﬀected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Decimation:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="7">
+               <widget class="QComboBox" name="val_decimationGain">
+                <item>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="wavePHA" columnstretch="1,2,1,2,1,2">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item row="0" column="4">
+               <widget class="QLabel" name="digitalProbe1PHA">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selects which signal is associated to the Digital Probe 1 in the readout data.&lt;/p&gt;&lt;p&gt;Note: Digital Probe 2 is always the trigger position for DPP-PHA firmware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Digital Probe:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="analogProbe1PHA">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selects which signal is associated to the Analog Trace 1 in the readout data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Analog Probe 1:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QComboBox" name="val_digitalProbe1PHA">
+                <item>
+                 <property name="text">
+                  <string>Peaking</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Armed</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Peak Run</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Pile Up</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Peaking</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TRG Validation Win</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Baseline Freeze</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TRG Hold-Off</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TRG Validation</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Acq Busy</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Zero Cross Win</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Ext TRG</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Busy</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="val_analogProbe1PHA">
+                <item>
+                 <property name="text">
+                  <string>Input</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>RC-CR</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>RC-CR2</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Trapezoid</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="analogProbe2PHA">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selects which signal is associated to the Analog Trace 2 in the readout data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Analog Probe 2:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QComboBox" name="val_analogProbe2PHA">
+                <item>
+                 <property name="text">
+                  <string>Input</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Threshold</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Trapezoid - Baseline</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Baseline</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tabFwTrigger">
+           <attribute name="title">
+            <string>Trigger</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <layout class="QGridLayout" name="mainTRG" rowstretch="0,0,0" columnstretch="1,2,1,2,1,2">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>250</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>6</number>
+              </property>
+              <item row="1" column="2">
+               <widget class="QLabel" name="localTrgVal">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable Local Trigger Validation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Local Trigger Validation:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="5">
+               <widget class="QComboBox" name="val_localTrgValMode">
+                <item>
+                 <property name="text">
+                  <string>Crossed</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Same</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>AND</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>OR</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="trgMode">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Trigger Mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Trigger Mode:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="val_shapedTrgWidth"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="shapedTrgWidth">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Shaped Trigger (i.e. Fast Discriminator Output) is a logic signal generated by a channel in correspondence with its local self-trigger. It is used to propagate the trigger to the other channels of the board and to other external boards, as well as to feed the coincidence trigger logic.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Shaped Trigger Width:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="localShapedTrgMode">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets how to combine the self-triggers of the channels inside each couple to generate a trigger request to the mother board.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Local Shaped Trigger Mode:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QSpinBox" name="val_preTrigger">
+                <property name="maximum">
+                 <number>4092</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QComboBox" name="val_localTrgVal">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QComboBox" name="val_localShapedTrg">
+                <item>
+                 <property name="text">
+                  <string>Disabled</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QComboBox" name="val_localShapedTrgMode">
+                <item>
+                 <property name="text">
+                  <string>AND</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Even</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Odd</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>OR</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="4">
+               <widget class="QLabel" name="localTrgValMode">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets how the trigger validation signal (val) is generated for the two channels inside a couple with respect to the local trigger (trg) or to the validation from motherboard.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Local Trigger Validation Mode:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="val_trgMode">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normal mode: each channel self-triggers independently from the other channels. &lt;/p&gt;&lt;p&gt;Coincidence mode: each channel can self-trigger independently from the other channels and it saves the event only when a validation signal occurs within its coincidence window. &lt;/p&gt;&lt;p&gt;Anticoincidence mode: each channel can self-trigger independently from the other channels and it saves the event only when no validation signal occurs within its coincidence window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="maxVisibleItems">
+                 <number>3</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Normal</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Coincidence</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reserved</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Anticoincidence</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="localShapedTrg">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable Local Shaped Trigger.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Local Shaped Trigger:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Pre Trigger deﬁnes the number of samples before the trigger in the waveform saved into memory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Pre Trigger:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLabel" name="trgHoldOff">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Trigger Hold-Oﬀ is a logic signal of programmable width generated by the trigger logic in correspondence of the fast discriminator output. Other triggers are inhibited for the overall Trigger Hold-Oﬀ duration.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Trigger Hold-Off:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QSpinBox" name="val_trgHoldOff"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabAcc">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <attribute name="title">
+        <string>Accelerator</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1295</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Project</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNewProject"/>
+    <addaction name="actionOpenProject"/>
+    <addaction name="actionSaveProject"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>CAEN Configuration</string>
+    </property>
+    <addaction name="actionSave"/>
+    <addaction name="actionLoad"/>
+   </widget>
+   <widget class="QMenu" name="menuHistograms">
+    <property name="title">
+     <string>Histograms</string>
+    </property>
+    <addaction name="actionOpenHistoSpy"/>
+   </widget>
+   <widget class="QMenu" name="menuOscilloscope">
+    <property name="title">
+     <string>Waves</string>
+    </property>
+    <addaction name="actionOpenWaveSpy"/>
+   </widget>
+   <widget class="QMenu" name="menuConvert">
+    <property name="title">
+     <string>Convert</string>
+    </property>
+    <addaction name="actionConvertRU"/>
+    <addaction name="actionConvertLF"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuConvert"/>
+   <addaction name="menuHistograms"/>
+   <addaction name="menuOscilloscope"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSave">
+   <property name="text">
+    <string>&amp;Save JSON</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionLoad">
+   <property name="text">
+    <string>&amp;Load JSON</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>&amp;Connect</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionOpenHistoSpy">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionOpenWaveSpy">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionNewProject">
+   <property name="text">
+    <string>New Project</string>
+   </property>
+  </action>
+  <action name="actionOpenProject">
+   <property name="text">
+    <string>Open Project</string>
+   </property>
+  </action>
+  <action name="actionSaveProject">
+   <property name="text">
+    <string>Save Project</string>
+   </property>
+  </action>
+  <action name="actionConvertRU">
+   <property name="text">
+    <string>Convert RU</string>
+   </property>
+  </action>
+  <action name="actionConvertLF">
+   <property name="text">
+    <string>Convert LF</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>changed()</signal>
+   <receiver>SlowControlInterface</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
